@@ -86,12 +86,18 @@ public func == <E>(lhs: E, rhs: Event<E>) -> Bool
 /// Useful for creating StateMachine without events, i.e. `StateMachine<MyState, NoEvent>`.
 public enum NoEvent: EventType
 {
+    /*
+    case NoEvent
+    */
+    
     public func hash(into hasher: inout Hasher)
     {
     }
-}
-
-public func == (lhs: NoEvent, rhs: NoEvent) -> Bool
-{
-    return true
+    
+    /*
+    public static func ==(lhs: NoEvent, rhs: NoEvent) -> Bool
+    {
+        return true
+    }
+    */
 }
